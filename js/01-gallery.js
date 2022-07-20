@@ -27,7 +27,7 @@ function createGalleryMarkup(galleryItems) {
 }
 
 function onGalleryContainerClick(e) {
-  e.prevent.Default();
+  e.preventDefault();
 
   if (e.target.classList.contains('gallery__image')) {
    const imageInstance = basicLightbox.create(
