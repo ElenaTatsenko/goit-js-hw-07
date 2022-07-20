@@ -49,6 +49,6 @@ function onGalleryContainerClick(e) {
 
     //const source = e.target.dataset.source
     //console.log(source);
- // }
-//}
+ /}
+}
 console.log(galleryItems);
