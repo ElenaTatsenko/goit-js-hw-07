@@ -5,7 +5,7 @@ const galleryContainer = document.querySelector('.gallery');
 const galleryMarkup = createGalleryMarkup(galleryItems);
 galleryContainer.insertAdjacentHTML('beforeend', galleryMarkup);
 
-//galleryContainer.addEventListener('click', onGalleryContainerClick);
+galleryContainer.addEventListener('click', onGalleryContainerClick);
 
 function createGalleryMarkup(galleryItems) {
     return galleryItems
@@ -26,26 +26,26 @@ function createGalleryMarkup(galleryItems) {
         .join('');
 }
 
-//function onGalleryContainerClick(e) {
- // e.prevent.Default();
+function onGalleryContainerClick(e) {
+  e.prevent.Default();
 
-  //if (e.target.classList.contains('gallery__image')) {
-  //  const imageInstance = basicLightbox.create(
-  //    `<img src = "${e.target.dataset.source}" with="800" height="600">`,
-  //    {
+  if (e.target.classList.contains('gallery__image')) {
+   const imageInstance = basicLightbox.create(
+      `<img src = "${e.target.dataset.source}" with="800" height="600">`,
+      {
 
-  //      onShow: () => window.addEventListener('keydown', onPressEsc),
-   //     onClose: () => window.addEventListener('keydown', onPressEsc),
-  //    }
- //   );
-  //  imageInstance.show();
- // }
-  //  function onPressEsc(e) {
-   //   if (e.code === 'Escape') {
-   ///     imageInstance.close();
-   //   }
+        onShow: () => window.addEventListener('keydown', onPressEsc),
+        onClose: () => window.addEventListener('keydown', onPressEsc),
+      }
+    );
+    imageInstance.show();
+  }
+    function onPressEsc(e) {
+      if (e.code === 'Escape') {
+        imageInstance.close();
+      }
      
-   //}
+   }
 
     //const source = e.target.dataset.source
     //console.log(source);
