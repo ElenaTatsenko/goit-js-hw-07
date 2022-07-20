@@ -39,16 +39,15 @@ function onGalleryContainerClick(e) {
       }
     );
     imageInstance.show();
-  }
+
     function onPressEsc(e) {
       if (e.code === 'Escape') {
         imageInstance.close();
       }
      
    }
-
-    //const source = e.target.dataset.source
-    //console.log(source);
+  }
+  
  }
 
 console.log(galleryItems);
